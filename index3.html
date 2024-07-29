@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spotlight page</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style>
+           .banner {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    background-image: url('/fireworks-1953253_1280.jpg'); 
+    background-size: cover;
+    background-position: center;
+}
+
+.banner-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #0009;
+    border-radius: 40px;
+    border: 2px solid white;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 4em;
+}
+
+.banner-text h1 {
+    font-size: 50px;
+    margin: 0;
+}
+
+.banner-text p {
+    font-size: 20px;
+}
+   .col-lg-3 img {
+    border-radius: 50%;
+    width: 10em;
+    height: 10em;
+
+}
+.col-lg-3 {
+    flex: 0 0 auto;
+    text-align: center;
+}
+.col-lg-3 h2{
+  font-size: 15px;
+}
+    #custom1 {
+      height: auto;
+      width: 100%;
+      border: 2px solid black;
+      background: repeating-linear-gradient(45deg, black, rgb(134, 81, 134) 50px);
+    }
+
+    .wrap3 {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+     
+    }
+    #section:hover{
+      transform: scale(0.95);
+      cursor: pointer;
+    }
+    .flex-row {
+    flex-direction: row!important;
+    flex-wrap: nowrap;
+}
+
+    @media only screen and (min-width:661px) and (max-width: 980px){
+      .wrap3{
+        gap: 30px;
+      }
+
+    }
+    @media only screen and (min-width:501px) and (max-width: 660px){
+      .wrap3{
+        gap: 20px;
+      }
+    }
+     @media only screen and (min-width:420px) and (max-width:500px){
+      .wrap3{
+        gap: 4px;
+      }
+     }
+    @media only screen and (max-width:390px){
+      .wrap3{
+        flex-direction: column;
+      }
+    }
+
+    @media only screen and (min-width:360px) and (max-width:865px){
+  .banner-text h1 {
+    font-size: 30px;
+}
+.banner-text p {
+    font-size: 10px;
+}
+.banner-text{
+  width: 100%;
+ }
+}
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" aria-label="Offcanvas navbar large">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="logo-removebg-preview.png" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2"
+        aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar2"
+        aria-labelledby="offcanvasNavbar2Label">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Digital Art</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index2.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index3.html">Spotlight</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index6.html">Fairs</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Service
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="index7.html">Partners</a></li>
+                <li><a class="dropdown-item" href="#ordinal">Ordinals</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">The collector's club</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index4.html">Contact</a>
+            </li>
+          </ul>
+          <button class="btn btn-outline-secondary" type="submit"><a href="index5.html"
+              style="color: white; text-decoration: none;">Sign in</a></button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="banner">
+    <div class="banner-text">
+        <h1>Spotlight Exhibitions</h1>
+        <p>Spotlight Exhibitions
+            Spotlight is an ongoing-curated exhibition series, in exploration of the digital art landscape. Digital Art Fair supports and showcases artists at the forefront of the intersection of art and technology, in an attempt to broaden the understandings and scope of digital art into realms that are familiar and new at the same time.</p>
+    </div>
+</div>
+  <div class=" custom-card " id="custom-cards">
+    <h1 class="py-3 text-center">Spotlight Exhibitions</h1>
+    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 px-4 py-5 my-4" id="custom1">
+      <div class="col">
+        <div class="card card-cover overflow-hidden text-bg-dark rounded-4 shadow-lg" id="section">
+          <div class="d-flex flex-row flex-wrap h-100 p-5 pb-3 text-white text-shadow-1"
+            style="background-color: black; border: 2px solid white;border-radius: 20px;">
+            <h1 class="display-6 lh-1 fw-bold">DIGITAL ART FAIR 2023</h1>
+            <p>In our most ambitious Art Fair yet, we connected global galleries to our regional partners at K11 MUSEA,
+              The Silicone Valley of Art and Culture in Hong Kong. Welcoming 10,000+ guests and achieving over $6
+              million in sales, furthering Digital Art Fair's positioning in the digital art and Web 3.0 space.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card card-cover overflow-hidden text-bg-dark rounded-4 shadow-lg" id="section">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1"
+            style="background-color: white; border: 2px solid black;border-radius: 20px;">
+            <h1 class="display-6 lh-1 fw-bold text-black">DIGITAL ART FAIR 2022</h1>
+            <p class="text-black">The second edition of Digital Art Fair welcomed more than 10,000 visitors over the 18
+              days from 20 October – 6 November 2022. In collaboration with Sotheby’s, the fair’s auctioneer partner,
+              Digital Art Fair’s Xperience Digital Art Auction achieved over $8 million HKD in sales revenue.
+              Digital Art Auction.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card card-cover overflow-hidden text-bg-dark rounded-4 shadow-lg" id="section">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1"
+            style="background-color: black; border: 2px solid white; border-radius: 20px;">
+            <h1 class="display-6 lh-1 fw-bold">DIGITAL ART FAIR 2021</h1>
+            <p>With overwhelming response from the public, the inaugural Digital Art Fair Asia officially came to an end
+              on 22 October 2021. The fair has welcomed more than 25,700 visitors and sold more than 400 Digital and
+              Physical Art for a combined HK$54.5 million (US$7 million) during a 23-day period.
+
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container mb-5">
+    <div class="row md-4 mx-4">
+      <h1 class="text-center my-4 fw-bold" id="wrap2">
+        DISCOVER THE WONDERS OF THE DIGITAL ART FAIR</h1>
+        <div class="wrap3">
+      <div class="col-lg-3 my-4">
+        <img src="https://static.wixstatic.com/media/e76dd7_115955dc8f2c4ae0bb474c4fcfa28515~mv2.gif" alt="">
+        <h2 class="fw-bold mt-3">
+          INSTALLATION</h2>
+           </div><!-- /.col-lg-4 -->
+      <div class="col-lg-3">
+       <img src="https://static.wixstatic.com/media/e76dd7_c91085a9b27b4e49a30223acc2f0f9fe~mv2.gif" alt="">
+        <h2 class="fw-bold mt-3">MACHINE</h2>
+           </div><!-- /.col-lg-4 -->
+      <div class="col-lg-3">
+      <img src="https://static.wixstatic.com/media/e76dd7_d4229cae86de4c97bcb1fa67c640c33e~mv2.gif" alt="">
+        <h2 class="fw-bold mt-3">CRYPTO</h2>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-3">
+        <img src="https://static.wixstatic.com/media/e76dd7_816aa98fcae742b2a11bbccbb7f6fe1c~mv2.gif" alt="">
+        <h2 class="fw-bold mt-3">AUGMENTED</h2>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-3 ">
+        <img src="https://static.wixstatic.com/media/e76dd7_edb1fa20568146dabd1b4c82318b1dfb~mv2.gif" alt="">
+        <h2 class="fw-bold mt-3">IMMERSIVE</h2>
+           </div><!-- /.col-lg-4 -->
+      <div class="col-lg-3">
+       <img src="https://static.wixstatic.com/media/e76dd7_93ffbc809d9e43b6b07230ef19db3ce9~mv2.gif" alt="">
+        <h2 class="fw-bold mt-3">ANIMATION</h2>
+           </div><!-- /.col-lg-4 -->
+      <div class="col-lg-3">
+      <img src="https://static.wixstatic.com/media/e76dd7_f558c14267274379aa93cfd948f73c57~mv2.gif" alt="">
+        <h2 class="fw-bold mt-3">
+          PROJECTION</h2>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-3 my-4">
+        <img src="https://static.wixstatic.com/media/e76dd7_ea8ded0007df43869ad45350198a4460~mv2.jpeg/v1/crop/x_168,y_0,w_432,h_432/fill/w_145,h_145,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Accenture-Immersive-Media.jpeg" alt="">
+        <h2 class="fw-bold mt-3">
+          VIRTUAL REALITY</h2>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-3">
+        <img src="https://static.wixstatic.com/media/e76dd7_cda34450d27746e481e9d35542be16cb~mv2.jpeg/v1/crop/x_46,y_0,w_183,h_183/fill/w_145,h_145,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/images%20(3).jpeg" alt="">
+        <h2 class="fw-bold mt-3">RENDERINGS</h2>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-3">
+        <img src="https://static.wixstatic.com/media/e76dd7_30867522703a42cca981bff5735549f2~mv2.jpg/v1/fill/w_145,h_145,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Collection%20Page_edited.jpg" alt="">
+        <h2 class="fw-bold mt-3">MARKETPLACE</h2>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-3">
+        <img src="https://static.wixstatic.com/media/1c88c4_32c47814252a408ebea733c9deb443a4~mv2.jpg/v1/crop/x_24,y_0,w_2000,h_2000/fill/w_145,h_145,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/DSC_0170_edited.jpg" alt="">
+        <h2 class="fw-bold mt-3">PHOTOGRAPHY</h2>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-3">
+        <img src="https://static.wixstatic.com/media/e76dd7_6f9a8d59b6db40a388a5f89ac9c19d6b~mv2.gif" alt="">
+        <h2 class="fw-bold mt-3">BLOCKCHAIN</h2>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-3 my-4">
+        <img src="https://static.wixstatic.com/media/e76dd7_80278b3543c144e4903995fd68065c93~mv2.png/v1/crop/x_0,y_191,w_1438,h_1438/fill/w_145,h_145,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/VIVIAN%20HO%20-%20midsummer%20craze%20_nam%20shan%20estate.png" alt="">
+        <h2 class="fw-bold mt-3">ILLUSTRATION</h2>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-3">
+        <img src="https://static.wixstatic.com/media/e76dd7_717d7353798d4fcc8c28f8438bc4c234~mv2.gif" alt="">
+        <h2 class="fw-bold mt-3">AI</h2>
+      </div><!-- /.col-lg-4 -->
+    </div>
+    </div>
+  
+  </div>
+
+  <footer class="py-5 px-5" style="background-color: black; color: white;">
+    <div class="row">
+      <div class="col-6 col-md-2 mb-3">
+        <h4 class="text-white fw-bold">Company</h4>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="index.html" class="nav-link p-0 text-white">Home</a></li>
+          <li class="nav-item mb-2"><a href="index2.html" class="nav-link p-0 text-white">About</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Spotlight</a></li>
+          <li class="nav-item mb-2"><a href="index6.html" class="nav-link p-0 text-white">Fair</a></li>
+          <li class="nav-item mb-2"><a href="index7.html" class="nav-link p-0 text-white">Service</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-2 mb-3">
+        <h4 class="text-white fw-bold">Link</h4>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="info@digitalartfair.io" class="nav-link p-0 text-white">INFO</a></li>
+          <li class="nav-item mb-2"><a href="partnership@digitalartfair.io" class="nav-link p-0 text-white">PARTNER
+              SHIPS</a></li>
+          <li class="nav-item mb-2"><a href="vip@digitalartfair.io" class="nav-link p-0 text-white">VIP.DIGITAL</a></li>
+          <li class="nav-item mb-2"><a href="media@digitalartfair.io" class="nav-link p-0 text-white">MEDIA.DIGITAL</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-2 mb-3">
+        <h4 class="text-white text-align-center fw-bold">Follow Us</h4>
+        <ul class="nav flex-row">
+          <li class="ms-2" style="font-size: 25px;"><i class="fa-brands fa-facebook"></i></li>
+          <li class="ms-3" style="font-size: 25px;"><i class="fa-brands fa-google-plus"></i></li>
+          <li class="ms-3" style="font-size: 25px;"><i class="fa-brands fa-square-instagram"></i></li>
+          <li class="ms-3" style="font-size: 25px;"><i class="fa-brands fa-square-twitter"></i></li>
+        </ul>
+      </div>
+
+      <div class="col-md-5 offset-md-1 mb-3">
+        <form>
+          <h4 class="fw-bold">Subscribe to our newsletter</h4>
+          <p>Monthly digest of what's new and exciting from us.</p>
+          <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+            <label for="newsletter1" class="visually-hidden">Email address</label>
+            <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+            <button class="btn btn-secondary" type="button">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="text-center border-top">
+      <p class="my-4">© 2024 Company, Inc. All rights reserved |<span class="text-info fw-bold">@SHARIQUA TASKEEN.G</span>|</p>
+    </div>
+  </footer>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

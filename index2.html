@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Page</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+  <style>
+           .banner {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    background-image: url('/concert-2527495_1920.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.banner-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #0009;
+    border-radius: 40px;
+    border: 2px solid white;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 4em;
+}
+
+.banner-text h1 {
+    font-size: 50px;
+    margin: 0;
+}
+
+.banner-text p {
+    font-size: 20px;
+}
+    img, svg {
+    vertical-align: middle;
+    width: 100%;
+}
+ #img:hover{
+  transform: scale(0.75);
+  cursor: pointer;
+}
+.card-container {
+    perspective: 1000px;
+}
+
+.card {
+    width: 100%;
+    height: 60vh;
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.card-front {
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    background-color: #f8f9fa;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 30px;
+}
+
+.card-container:hover .card {
+    transform: rotateY(180deg);
+} 
+
+.card-img-top {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    object-fit: cover;
+}
+.card-front video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+}
+.flex-row {
+    flex-direction: row!important;
+    flex-wrap: nowrap;
+}
+@media only screen and (min-width:360px) and (max-width:760px){
+  .row{
+  gap: 20px;
+}
+}
+@media only screen and (min-width:360px) and (max-width:865px){
+  .banner-text h1 {
+    font-size: 30px;
+}
+.banner-text p {
+    font-size: 10px;
+}
+ .banner-text{
+  width: 100%;
+ }
+ button.btn {
+    margin-bottom: 1em;
+}
+
+}
+  </style>
+</head>
+
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" aria-label="Offcanvas navbar large">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="logo-removebg-preview.png" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2"
+        aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar2"
+        aria-labelledby="offcanvasNavbar2Label">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Digital Art</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index2.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index3.html">Spotlight</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index6.html">Fairs</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Service
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="index7.html">Partners</a></li>
+                <li><a class="dropdown-item" href="#ordinal">Ordinals</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">The collector's club</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index4.html">Contact</a>
+            </li>
+          </ul>
+          <button class="btn btn-outline-secondary" type="submit"><a href="index5.html" style="color: white; text-decoration: none;">Sign in</a></button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="banner">
+    <div class="banner-text">
+        <h1>DIGITAL ART FAIR</h1>
+        <p>
+          Digital Art Fair, founded in 2020, is the world's first Web 3.0 Fine Art Fair with a focus on innovative art created for every demographic that wishes to appreciate, create, and collect digital and NFT Fine Art. 
+          With the vision  to cultivate and inspire a new generation of art collectors to embrace the use of digital technology to explore the beauty of art and culture. 
+        </p>
+    </div>
+</div>
+  <div class="container">
+    <div class="row mb-2 my-5">
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <h3 class="mb-0 fw-bold">SUBSTAINABILITY</h3>
+            <p class="card-text ">Providing education and opportunities for young artists, art practitioners and art collectors to learn and connect with Art & Tech.</p>
+            <a href="#" class="stretched-link">Continue reading</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <img src="digital-art-inmersive-exhibition (1).jpg" class="bd-placeholder-img" width="200" height="250"
+              alt="">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <h3 class="mb-0 fw-bold">INCLUSIVITY</h3>
+            <p class="">As a pioneering art platform in a dynamic and rapidly evolving landscape of art, the Digital Art Fair.</p>
+            <a href="#" class="stretched-link">Continue reading</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <img src="digital-art-inmersive-exhibition (2).jpg" class="bd-placeholder-img" width="200" height="250"
+              alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container my-5">
+    <hr class="featurette-divider">
+    <div class="row featurette d-flex justify-content-center align-items-center">
+      <div class="col-md-6">
+        <h2 class="featurette-heading fw-normal lh-1 fw-bold">ABOUT
+          DIGITAL ART FAIR</h2>
+        <p class="lead my-4">
+          Digital Art Fair is the leading Web 3.0 annual art fair in the world of the digital art era. Showcasing some
+          of the most innovative and exciting digital art and NFTs from around the globe. The fair provides a platform
+          for emerging and established artists to exhibit their work, and for art enthusiasts and collectors to discover
+          and acquire new digital artwork. With the vision to cultivate and inspire a new generation of art collectors
+          to embrace the use of digital technology to explore the beauty of art and culture.</p>
+        <a href="#"><button class="btn btn-outline-secondary d-inline-flex align-items-center" type="button">
+          About Us &nbsp;&nbsp; <i class="fa-solid fa-arrow-right"></i>
+        </button></a>
+      </div>
+      <div class="col-md-5">
+        <img src="https://i.pinimg.com/564x/d6/f2/29/d6f2297d7349405c2bd730fb3fb1504d.jpg" img-fluid mx-auto width="400"
+          height="450" alt="">
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="container px-4 py-5" id="custom-cards">
+      <h1 class="pb-2 border-bottom text-center fw-bold">DIGITAL ART</h1>
+
+
+      <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card-container">
+                    <div class="card">
+                        <div class="card-front">
+                            <img src="https://i.pinimg.com/564x/c8/21/95/c82195bc26ab200b3b9426139847d7c5.jpg" class="card-img-top" alt="Image 1">
+                        </div>
+                        <div class="card-back">
+                            <h3 class="fw-bold">Digital Art</h3>
+                            <p>Digital art is any artwork that draws upon digital technology as an essential part of its creative process.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card-container">
+                    <div class="card">
+                        <div class="card-front">
+                            <img src="https://i.pinimg.com/564x/1a/db/cb/1adbcbfdd6e9b8bc2736c5d99cbc8ee8.jpg" class="card-img-top" alt="Image 2"> 
+                        </div>
+                        <div class="card-back">
+                            <h3 class="fw-bold">Digital Art</h3>
+                            <p>Digital art is any artwork that draws upon digital technology as an essential part of its creative process.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card-container">
+                    <div class="card">
+                        <div class="card-front">
+                            <img src="https://i.pinimg.com/564x/4f/24/01/4f2401a761a8cdc8cd3785d567769427.jpg" class="card-img-top" alt="Image 3">
+                        </div>
+                        <div class="card-back">
+                            <h3 class="fw-bold">Digital Art</h3>
+                            <p>Digital art is any artwork that draws upon digital technology as an essential part of its creative process.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+  </div>
+
+  <footer class="py-5 px-5" style="background-color: black; color: white;">
+    <div class="row">
+      <div class="col-6 col-md-2 mb-3">
+        <h4 class="text-white fw-bold">Company</h4>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="index.html" class="nav-link p-0 text-white">Home</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">About</a></li>
+          <li class="nav-item mb-2"><a href="index3.html" class="nav-link p-0 text-white">Spotlight</a></li>
+          <li class="nav-item mb-2"><a href="index6.html" class="nav-link p-0 text-white">Fair</a></li>
+          <li class="nav-item mb-2"><a href="index7.html" class="nav-link p-0 text-white">Service</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-2 mb-3">
+        <h4 class="text-white fw-bold">Link</h4>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="info@digitalartfair.io" class="nav-link p-0 text-white">INFO</a></li>
+          <li class="nav-item mb-2"><a href="partnership@digitalartfair.io" class="nav-link p-0 text-white">PARTNER SHIPS</a></li>
+          <li class="nav-item mb-2"><a href="vip@digitalartfair.io" class="nav-link p-0 text-white">VIP.DIGITAL</a></li>
+          <li class="nav-item mb-2"><a href="media@digitalartfair.io" class="nav-link p-0 text-white">MEDIA.DIGITAL</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-2 mb-3">
+        <h4 class="text-white text-align-center fw-bold">Follow Us</h4>
+        <ul class="nav flex-row">
+          <li class="ms-2" style="font-size: 25px;"><i class="fa-brands fa-facebook"></i></li>
+        <li class="ms-3" style="font-size: 25px;"><i class="fa-brands fa-google-plus"></i></li>
+        <li class="ms-3" style="font-size: 25px;"><i class="fa-brands fa-square-instagram"></i></li>
+        <li class="ms-3" style="font-size: 25px;"><i class="fa-brands fa-square-twitter"></i></li>
+                  </ul>
+      </div>
+
+      <div class="col-md-5 offset-md-1 mb-3">
+        <form>
+          <h4 class="fw-bold">Subscribe to our newsletter</h4>
+          <p>Monthly digest of what's new and exciting from us.</p>
+          <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+            <label for="newsletter1" class="visually-hidden">Email address</label>
+            <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+            <button class="btn btn-secondary" type="button">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="text-center  border-top">
+      <p class="my-4">© 2024 Company, Inc. All rights reserved |<span class="text-info fw-bold">@SHARIQUA TASKEEN.G</span>|</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Service-Ordinal</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style>
+    body {
+      background-color: black;
+    }
+
+    .carousel-caption {
+      top: 50%;
+      transform: translateY(-50%);
+      bottom: initial;
+      text-align: center;
+      left: 50%;
+      width: 100%;
+      background: linear-gradient(45deg, black, transparent);
+      transform: translate(-50%, -50%);
+      right: 0;
+    }
+
+    .card {
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card:hover .card-text {
+      display: block;
+    }
+
+    .parallax {
+      background-image: url('https://static.wixstatic.com/media/1c88c4_f6a0012f10084e5480214db90d3f66d7~mv2.jpg/v1/fill/w_1349,h_706,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1c88c4_f6a0012f10084e5480214db90d3f66d7~mv2.jpg');
+      height: 100vh;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+    }
+
+    .centered-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      /* Optional: dark overlay */
+    }
+
+    .text1 {
+      font-size: 20px;
+    }
+    .flex-row {
+    flex-direction: row!important;
+    flex-wrap: nowrap;
+}
+
+    @media only screen and (min-width:561px) and (max-width:960px) {
+      .text1 {
+        font-size: 12px;
+      }
+    }
+    @media only screen and (min-width:360px) and (max-width:760px) {
+   .row{
+    gap: 40px;
+   }
+    }
+    @media only screen and (min-width:360px) and (max-width:560px) {
+      .text1 {
+        font-size: 10px;
+      }
+      
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark ">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="logo-removebg-preview.png" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2"
+        aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar2"
+        aria-labelledby="offcanvasNavbar2Label">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Digital Art</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
+            <li class="nav-item">
+              <a class="nav-link " href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index2.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index3.html">Spotlight</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index6.html">Fairs</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" aria-current="page" href="#" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Service
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="index7.html">Partners</a></li>
+                <li><a class="dropdown-item" href="#ordinal">Ordinals</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">The collector's club</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index4.html">Contact</a>
+            </li>
+          </ul>
+          <button class="btn btn-outline-secondary" type="submit"><a href="index5.html"
+              style="color: white; text-decoration: none;">Sign in</a></button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img
+        src="https://media.istockphoto.com/id/981901860/photo/cloud-computing.jpg?s=612x612&w=0&k=20&c=57rCYEmxsm1LmLyS91393e8UPgBmqck41dt4lDx329A="
+        class="img-top" img-fluid mx-auto width="100%" height="650vh" style="margin-top:5em;" alt="Image 1">
+      <div class="carousel-caption d-none d-md-block">
+        <h1 class=" fw-bold">Collector's Club
+          House Ordinals</h1>
+        <p class=" fw-bold fs-5">Advancing Art and Culture through Technology.</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div id="carouselExample" class="carousel slide my-5" data-ride="carousel">
+      <h1 class="text-center text-white">Digital Art Fair</h1>
+      <div class="carousel-inner my-4">
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card">
+                <img src="train.jpg" class="card-img-top" style="width: 100%; height: 50vh;" alt="Image 1">
+                <div class="card-body bg-dark">
+                  <p class="card-text text-white">Digital art is a dynamic and evolving field that merges creativity
+                    with technology to produce a wide range of visual works. Unlike traditional art forms, digital art
+                    is created using digital tools and software.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <img src="architecture-2576906_640.jpg" class="card-img-top" style="width: 100%; height: 50vh;"
+                  alt="Image 2">
+                <div class="card-body bg-dark">
+                  <p class="card-text text-white">Digital software, allowing artists to experiment with new techniques,
+                    styles, and mediums. This includes everything from digital painting and 3D modeling to interactive
+                    installations and virtual reality.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <img src="building-279769_640.jpg" class="card-img-top" style="width: 100%; height: 50vh;"
+                  alt="Image 3">
+                <div class="card-body bg-dark">
+                  <p class="card-text text-white"> The accessibility and versatility of digital art have made it
+                    increasingly popular, as artists can easily share their work with a global audience through online
+                    platforms and social media. Moreover, the advent.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card">
+                <img src="library-5641389_640.jpg" class="card-img-top" style="width: 100%; height: 50vh;"
+                  alt="Image 4">
+                <div class="card-body bg-dark">
+                  <p class="card-text text-white">The advent of blockchain technology and NFTs
+                    revolutionized the way digital art is bought, sold, and authenticated, providing new opportunities
+                    for artists to monetize their creations.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <img src="architecture-6482060_640.jpg" class="card-img-top" style="width: 100%; height: 50vh;"
+                  alt="Image 5">
+                <div class="card-body bg-dark">
+                  <p class="card-text text-white">digital art is bought, sold, and authenticated, providing new
+                    opportunities for artists to monetize their creations. Digital art continues to push the boundaries
+                    of what is possible..</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <img src="last-image.jpg" class="card-img-top" style="width: 100%; height: 50vh;" alt="Image 6">
+                <div class="card-body bg-dark">
+                  <p class="card-text text-white">Digital art is created using digital tools and software, allowing
+                    artists to experiment with new techniques, styles, and mediums. This includes everything from
+                    digital painting and 3D modeling.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </a>
+    </div>
+  </div>
+  <div class="parallax">
+    <div class="overlay"></div>
+    <div class="centered-text">
+      <h1 class="fw-bold">Welcome to Service</h1>
+      <p class="text1">
+        A "service digital art fair" typically refers to an event or platform that facilitates the showcasing, buying,
+        and selling of digital art. These fairs can be held physically, online, or as a hybrid of both, and they offer a
+        space for artists, collectors, and art enthusiasts to engage with digital artworks. Here are some key aspects of
+        such a fair.Traditional galleries or museums that feature digital art through screens, projections, or
+        interactive installations. Artists might give live demonstrations or talks about their creative process.Many
+        digital art fairs incorporate Non-Fungible Tokens (NFTs) to authenticate and sell digital artworks.Opportunities
+        for artists to connect with collectors, curators, and fellow artists.</p>
+    </div>
+  </div>
+
+  <div class="parallax" id="ordinal">
+    <div class="overlay"></div>
+    <div class="centered-text">
+      <h1 class="fw-bold">Welcome to Ordinals</h1>
+      <p class=" text1">"Ordinals Digital Art Fair" likely refers to a specific event or platform that focuses on
+        showcasing and promoting digital art created using ordinal methods or technologies. However, as of my last
+        update, there isn't a well-known event by this exact name. It's possible that it might be a new or emerging
+        concept or a specific niche within the digital art community.This might involve digital artworks that use
+        ordered sequences or algorithms in their creation. Ordinal methods could refer to generative art where the
+        sequence or order of operations determines the final artwork.If it involves "ordinals," it might relate to
+        digital art in the context of Non-Fungible Tokens (NFTs) where each artwork is uniquely ordered or cataloged on
+        a blockchain.</p>
+    </div>
+  </div>
+
+  <footer class="py-5 px-5 mt-5" style="background-color: black; color: white;">
+    <div class="row">
+      <div class="col-6 col-md-2 mb-3">
+        <h4 class="text-white fw-bold">Company</h4>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="index.html" class="nav-link p-0 text-white">Home</a></li>
+          <li class="nav-item mb-2"><a href="index2.html" class="nav-link p-0 text-white">About</a></li>
+          <li class="nav-item mb-2"><a href="index3.html" class="nav-link p-0 text-white">Spotlight</a></li>
+          <li class="nav-item mb-2"><a href="index6.html" class="nav-link p-0 text-white">Fair</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Service</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-2 mb-3">
+        <h4 class="text-white fw-bold">Link</h4>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="info@digitalartfair.io" class="nav-link p-0 text-white">INFO</a></li>
+          <li class="nav-item mb-2"><a href="partnership@digitalartfair.io" class="nav-link p-0 text-white">PARTNER
+              SHIPS</a></li>
+          <li class="nav-item mb-2"><a href="vip@digitalartfair.io" class="nav-link p-0 text-white">VIP.DIGITAL</a></li>
+          <li class="nav-item mb-2"><a href="media@digitalartfair.io" class="nav-link p-0 text-white">MEDIA.DIGITAL</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-2 mb-3">
+        <h4 class="text-white text-align-center fw-bold">Follow Us</h4>
+        <ul class="nav flex-row">
+          <li class="ms-2" style="font-size: 25px;"><i class="fa-brands fa-facebook"></i></li>
+          <li class="ms-3" style="font-size: 25px;"><i class="fa-brands fa-google-plus"></i></li>
+          <li class="ms-3" style="font-size: 25px;"><i class="fa-brands fa-square-instagram"></i></li>
+          <li class="ms-3" style="font-size: 25px;"><i class="fa-brands fa-square-twitter"></i></li>
+        </ul>
+      </div>
+
+      <div class="col-md-5 offset-md-1 mb-3">
+        <form>
+          <h4 class="fw-bold">Subscribe to our newsletter</h4 class="fw-bold">
+          <p>Monthly digest of what's new and exciting from us.</p>
+          <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+            <label for="newsletter1" class="visually-hidden">Email address</label>
+            <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+            <button class="btn btn-secondary" type="button">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="text-center  border-top">
+      <p class="my-4">© 2024 Company, Inc. All rights reserved |<span class="text-info fw-bold">@SHARIQUA
+          TASKEEN.G</span>|</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

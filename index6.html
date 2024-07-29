@@ -1,0 +1,616 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fair page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+  <style>
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    background-image: url('https://static.wixstatic.com/media/11062b_01d453afabd246f5849172d4141992a2~mv2.jpg/v1/fill/w_980,h_467,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/11062b_01d453afabd246f5849172d4141992a2~mv2.jpg'); 
+    background-size: cover;
+    background-position: center;
+}
+
+.banner-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #0005;
+    border-radius: 40px;
+    border: 2px solid white;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 4em;
+}
+
+.banner-text h1 {
+    font-size: 50px;
+    margin: 0;
+}
+
+.banner-text p {
+    font-size: 20px;
+}
+    .wrap3{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+    .col-lg-3 {
+    flex: 0 0 auto;
+    text-align: center;
+}
+.col-lg-3 img{
+  border: 2px solid black;
+  padding: 15px;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+/**
+* CARD
+**/
+
+.card {
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%) translateZ(0);
+    transform: translateX(-50%) translateY(-50%) translateZ(0); */
+    width: 370px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    -webkit-transition: box-shadow 0.5s;
+    transition: box-shadow 0.5s;
+}
+
+.card a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.card:hover {
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+}
+
+
+/**
+* DATE
+**/
+
+.card__date {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    padding-top: 10px;
+    background-color: coral;
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+    font-weight: 700;
+    line-height: 13px;
+}
+
+.card__date__day {
+    font-size: 14px;
+}
+
+.card__date__month {
+    text-transform: uppercase;
+    font-size: 10px;
+}
+
+
+
+/**
+* THUMB
+**/
+
+.card__thumb {
+    height: 245px;
+    overflow: hidden;
+    background-color: #000;
+    -webkit-transition: height 0.5s;
+    transition: height 0.5s;
+}
+
+.card__thumb img {
+    width: 100%;
+    display: block;
+    height: 50vh;
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+    transition: opacity 0.5s, -webkit-transform 0.5s;
+    transition: opacity 0.5s, transform 0.5s;
+    transition: opacity 0.5s, transform 0.5s, -webkit-transform 0.5s;
+}
+
+.card:hover .card__thumb {
+    height: 130px;
+}
+
+.card:hover .card__thumb img {
+    opacity: 0.6;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+
+/**
+* card_BODY
+**/
+
+.card__body {
+    position: relative;
+    height: 185px;
+    padding: 20px;
+    -webkit-transition: height 0.5s;
+    transition: height 0.5s;
+}
+
+.card:hover .card__body {
+    height: 300px;
+}
+
+.card__category {
+    position: absolute;
+    top: -25px;
+    left: 0;
+    height: 25px;
+    padding: 0 15px;
+    background-color: coral;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 11px;
+    line-height: 25px;
+}
+
+.card__title {
+    margin: 0;
+    padding: 0 0 10px 0;
+    color: #000;
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.card__subtitle {
+    margin: 0;
+    padding: 0 0 10px 0;
+    font-size: 19px;
+    color: coral;
+}
+
+.card__description {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    /* bottom: 56px; */
+    margin: 0;
+    padding: 0;
+    color: #666C74;
+    line-height: 27px;
+    opacity: 0;
+    -webkit-transform: translateY(45px);
+    transform: translateY(45px);
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    transition: opacity 0.3s, -webkit-transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s, -webkit-transform 0.3s;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.card:hover .card__description {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    -webkit-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+
+.card__footer {
+    position: absolute;
+    bottom: 12px;
+    left: 20px;
+    right: 20px;
+    font-size: 11px;
+    color: #A3A9A2;
+}
+
+.icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin: -2px 0 0 2px;
+    font-size: 18px;
+}
+
+.icon+.icon {
+    padding-left: 10px;
+}
+
+        .flex-row {
+    flex-direction: row!important;
+    flex-wrap: nowrap;
+}
+    
+        @media only screen and (min-width:661px) and (max-width: 980px){
+      .wrap3{
+        gap: 30px;
+      }
+
+    }
+    @media only screen and (min-width:501px) and (max-width: 660px){
+      .wrap3{
+        gap: 20px;
+      }
+    }
+     @media only screen and (min-width:420px) and (max-width:500px){
+      .wrap3{
+        gap: 10px;
+      }
+     }
+    @media only screen and (max-width:390px){
+      .wrap3{
+        flex-direction: column;
+      }
+      .col-lg-3 img{
+        padding: 0px;
+      }
+    }
+    @media only screen and (min-width:360px) and (max-width:865px){
+  .banner-text h1 {
+    font-size: 30px;
+}
+
+.banner-text p {
+    font-size: 10px;
+}
+.banner-text{
+  width: 100%;
+ }
+
+}
+  </style>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark ">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="logo-removebg-preview.png" alt="">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2"
+            aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar2"
+            aria-labelledby="offcanvasNavbar2Label">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Digital Art</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+    
+                <li class="nav-item">
+                  <a class="nav-link "  href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="index2.html">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="index3.html">Spotlight</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="index6.html">Fairs</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Service
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="index7.html">Partners</a></li>
+                    <li><a class="dropdown-item" href="#ordinal">Ordinals</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">The collector's club</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="index4.html">Contact</a>
+                </li>
+              </ul>
+              <button class="btn btn-outline-secondary" type="submit"><a href="index5.html" style="color: white; text-decoration: none;">Sign in</a></button>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="banner">
+        <div class="banner-text">
+            <h1>PAST FAIRS</h1>
+            <p>The Digital Art Fair, after three years, continues its success with three thriving fairs. Notably, these fairs featured cutting-edge technology, global participation, and a focus on NFTs and digital media. The integration of virtual experiences, a diverse range of international artworks, and an emphasis on emerging art forms contributed to their widespread appeal.</p>
+        </div>
+    </div>
+
+
+    <div class="container mt-5 mb-5">
+      <h1 class="text-center fw-bold">PAST FAIR</h1>
+      <div class="row g-4">
+          <div class="col-md-4 d-flex justify-content-center">
+              <article class="card">
+          <header class="card__thumb">
+              <a href="#"><img src="https://img.freepik.com/premium-photo/art-wine-workshop-art-wine-experience-women-unleash-their-creative-spirits_223582-3134.jpg?w=360"/></a>
+          </header>
+          <date class="card__date">
+              <span class="card__date__day">06</span>
+              <br/>
+              <span class="card__date__month">July</span>
+          </date>
+          <div class="card__body">
+              <div class="card__category"><a href="#">ART</a></div>
+              <h2 class="card__title"><a href="#"> digital art fair！</a></h2>
+              <div class="card__subtitle">substance used for creating artwork！</div>
+              <p class="card__description">A substance used for creating artwork, typically consisting of pigments mixed with a  acrylic, or watercolor!</p>
+          </div>
+          <footer class="card__footer">
+              <span class="icon ion-clock"></span> 10 mins ago
+              <span class="icon ion-chatbox"></span><a href="#"> 145 comments</a>
+          </footer>
+      </article>
+  </div>
+  <div class="col-md-4 d-flex justify-content-center">
+      <article class="card">
+  <header class="card__thumb">
+      <a href="#"><img src="https://t4.ftcdn.net/jpg/07/27/44/81/240_F_727448146_bjEm5JvOpTqvWND0fLuCfx6t57ElC7tr.jpg"/></a>
+  </header>
+  <date class="card__date">
+      <span class="card__date__day">06</span>
+      <br/>
+      <span class="card__date__month">July</span>
+  </date>
+  <div class="card__body">
+      <div class="card__category"><a href="#">ART</a></div>
+      <h2 class="card__title"><a href="#">digital art fair！</a></h2>
+      <div class="card__subtitle">Artists use various types of paint！</div>
+      <p class="card__description">Artists use various types of paint to create visual art on surfaces like canvas, paper, or walls!</p>
+  </div>
+  <footer class="card__footer">
+      <span class="icon ion-clock"></span> 10 mins ago
+      <span class="icon ion-chatbox"></span><a href="#"> 145 comments</a>
+  </footer>
+</article>
+</div>
+<div class="col-md-4 d-flex justify-content-center">
+  <article class="card">
+<header class="card__thumb">
+  <a href="#"><img src="https://t4.ftcdn.net/jpg/01/58/62/41/240_F_158624105_XdBQQTx0pDhkfsjYBuD7xTKYPpMRZN3w.jpg"/></a>
+</header>
+<date class="card__date">
+  <span class="card__date__day">06</span>
+  <br/>
+  <span class="card__date__month">July</span>
+</date>
+<div class="card__body">
+  <div class="card__category"><a href="#">ART</a></div>
+  <h2 class="card__title"><a href="#">digital art fair！</a></h2>
+  <div class="card__subtitle">A liquid that is applied surfaces！</div>
+  <p class="card__description">A liquid that is applied to surfaces to provide color, protection, or texture. This type of construction!</p>
+</div>
+<footer class="card__footer">
+  <span class="icon ion-clock"></span> 10 mins ago
+  <span class="icon ion-chatbox"></span><a href="#"> 145 comments</a>
+</footer>
+</article>
+</div>
+<div class="col-md-4 d-flex justify-content-center">
+  <article class="card">
+<header class="card__thumb">
+  <a href="#"><img src="https://t4.ftcdn.net/jpg/01/91/24/81/240_F_191248191_pxIhuZEIw66u63y4cqvgzWoDtmGvwTDc.jpg"/></a>
+</header>
+<date class="card__date">
+  <span class="card__date__day">06</span>
+  <br/>
+  <span class="card__date__month">July</span>
+</date>
+<div class="card__body">
+  <div class="card__category"><a href="#">ART</a></div>
+  <h2 class="card__title"><a href="#">digital art fair！</a></h2>
+  <div class="card__subtitle">paint is commonly used construction！</div>
+  <p class="card__description">paint is commonly used in construction and home improvement for painting walls, ceilings, furniture,to create art!</p>
+</div>
+<footer class="card__footer">
+  <span class="icon ion-clock"></span> 10 mins ago
+  <span class="icon ion-chatbox"></span><a href="#"> 145 comments</a>
+</footer>
+</article>
+</div>
+<div class="col-md-4 d-flex justify-content-center">
+  <article class="card">
+<header class="card__thumb">
+  <a href="#"><img src="https://t4.ftcdn.net/jpg/02/01/02/39/240_F_201023932_amAhY8rYbBLc3ak7JFBE1tBxy2TnjpqA.jpg"/></a>
+</header>
+<date class="card__date">
+  <span class="card__date__day">06</span>
+  <br/>
+  <span class="card__date__month">July</span>
+</date>
+<div class="card__body">
+  <div class="card__category"><a href="#">ART</a></div>
+  <h2 class="card__title"><a href="#">digital art fair！</a></h2>
+  <div class="card__subtitle">In the context of digital art！</div>
+  <p class="card__description">In the context of digital art, "paint" refers to software tools and applications that allow users to create art!</p>
+</div>
+<footer class="card__footer">
+  <span class="icon ion-clock"></span> 10 mins ago
+  <span class="icon ion-chatbox"></span><a href="#"> 145 comments</a>
+</footer>
+</article>
+</div>
+<div class="col-md-4 d-flex justify-content-center">
+  <article class="card">
+<header class="card__thumb">
+  <a href="#"><img src="https://t3.ftcdn.net/jpg/02/98/80/24/240_F_298802453_Zbwf6MsGR39iWTdAMkw9feWvyuiX6VOV.jpg"/></a>
+</header>
+<date class="card__date">
+  <span class="card__date__day">06</span>
+  <br/>
+  <span class="card__date__month">July</span>
+</date>
+<div class="card__body">
+  <div class="card__category"><a href="#">ART</a></div>
+  <h2 class="card__title"><a href="#">digital art fair！</a></h2>
+  <div class="card__subtitle">It can relate to historical practices！</div>
+  <p class="card__description">It can relate to historical practices, legal standards, or societal norms regarding what was considered fair!</p>
+</div>
+<footer class="card__footer">
+  <span class="icon ion-clock"></span> 10 mins ago
+  <span class="icon ion-chatbox"></span><a href="#"> 145 comments</a>
+</footer>
+</article>
+</div>
+      </div>
+  </div>
+      <div class="container mb-5">
+        <div class="row md-4 mx-4">
+          <h1 class="text-center my-4 fw-bold" id="wrap2">
+            GALLERIES WE HAVE WORKED WITH</h1>
+            <div class="wrap3">
+          <div class="col-lg-3 my-4">
+            <img src="https://static.wixstatic.com/media/1c88c4_8c3fd4c3f02f43c782d23c01a3f2628a~mv2.png/v1/fill/w_160,h_20,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/de_Sarthe_Logo.png" alt="">
+               </div><!-- /.col-lg-4 -->
+          <div class="col-lg-3">
+           <img src="https://static.wixstatic.com/media/1c88c4_aa9b7e8f2aaf40d0bf3c6869a495c51d~mv2.png/v1/fill/w_160,h_50,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/CRYPTYQUES.png" alt="">
+               </div><!-- /.col-lg-4 -->
+          <div class="col-lg-3">
+          <img src="https://static.wixstatic.com/media/1c88c4_d420950b03c44656b916aa35a7899b45~mv2.png/v1/fill/w_220,h_35,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Almanaque.png" alt="">
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-3">
+            <img src="https://static.wixstatic.com/media/1c88c4_152d6087693d472cb1216f3d15872356~mv2.png/v1/fill/w_255,h_50,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Anca%20POTERASU%20Gallery%20logo.png" alt="">
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-3 ">
+            <img src="https://static.wixstatic.com/media/1c88c4_2259ee726bf14cb4ac5847e7c39895bb~mv2.png/v1/fill/w_144,h_27,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Obscura%20lockup%20horizontal%20-%20brand%20black%20(1).png" alt="">
+               </div><!-- /.col-lg-4 -->
+          <div class="col-lg-3">
+           <img src="https://static.wixstatic.com/media/1c88c4_f6bf49ffbccb42eaa91263ee06551153~mv2.png/v1/fill/w_82,h_88,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/o-de%20logo.png" alt="">
+               </div><!-- /.col-lg-4 -->
+          <div class="col-lg-3">
+          <img src="https://static.wixstatic.com/media/1c88c4_53627cd867e44ddc929ffdac34ed1949~mv2.png/v1/fill/w_105,h_105,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/TSH_logo-01.png" alt="">
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-3">
+            <img src="https://static.wixstatic.com/media/1c88c4_b86c73f5b531410a866ef712b82c0e35~mv2.jpg/v1/fill/w_113,h_113,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/logo.jpg" alt="">
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-3">
+            <img src="https://static.wixstatic.com/media/1c88c4_c3e74394994a4d87b4bfe84f28c864cf~mv2.jpg/v1/fill/w_160,h_105,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/BLINK%20new%20logo%202019.jpg" alt="">
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-3">
+            <img src="https://static.wixstatic.com/media/1c88c4_c8b784d87ccf4af49fe598f3c4011026~mv2.png/v1/fill/w_224,h_74,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/shout.png" alt="">
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-3">
+            <img src="https://static.wixstatic.com/media/1c88c4_a630529ebfb94bef8163a24cdb71bee8~mv2.jpg/v1/fill/w_125,h_125,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Bamboo%20Scenes%20.jpg" alt="">
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-3">
+            <img src="https://static.wixstatic.com/media/1c88c4_228b2a5412c34269a4e322d538c09747~mv2.png/v1/fill/w_255,h_35,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/UL_Logo_(F)%20(1).png" alt="">
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-3">
+            <img src="https://static.wixstatic.com/media/1c88c4_62a778b8fe87493182c7e9b976bd28c2~mv2.jpg/v1/fill/w_283,h_50,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/NEW%20LOGO%20OPERA%20GALLERY%20BLACK_HIGH_FINAL.jpg" alt="">
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-3">
+            <img src="https://static.wixstatic.com/media/1c88c4_e7244dd757694e66bd5a5f945d628c80~mv2.jpg/v1/fill/w_225,h_50,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Max%20Estrella.jpg" alt="">
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-3">
+            <img src="https://static.wixstatic.com/media/1c88c4_c7a2cb1d4cd349c09150ec7bb39654b5~mv2.jpg/v1/crop/x_0,y_148,w_390,h_95/fill/w_195,h_45,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/production-e776a213ff6198208e58e8b05ccebaaa-bitforms_square.jpg" alt="">
+          </div><!-- /.col-lg-4 -->
+        </div>
+        </div>
+      
+      </div>
+      <footer class="py-5 px-5" style="background-color: black; color: white;">
+        <div class="row">
+          <div class="col-6 col-md-2 mb-3">
+            <h4 class="text-white fw-bold">Company</h4>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="index.html" class="nav-link p-0 text-white">Home</a></li>
+              <li class="nav-item mb-2"><a href="index2.html" class="nav-link p-0 text-white">About</a></li>
+              <li class="nav-item mb-2"><a href="index3.html" class="nav-link p-0 text-white">Spotlight</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Fair</a></li>
+              <li class="nav-item mb-2"><a href="index7.html" class="nav-link p-0 text-white">Service</a></li>
+            </ul>
+          </div>
+    
+          <div class="col-6 col-md-2 mb-3">
+            <h4 class="text-white fw-bold">Link</h4>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="info@digitalartfair.io" class="nav-link p-0 text-white">INFO</a></li>
+              <li class="nav-item mb-2"><a href="partnership@digitalartfair.io" class="nav-link p-0 text-white">PARTNER SHIPS</a></li>
+              <li class="nav-item mb-2"><a href="vip@digitalartfair.io" class="nav-link p-0 text-white">VIP.DIGITAL</a></li>
+              <li class="nav-item mb-2"><a href="media@digitalartfair.io" class="nav-link p-0 text-white">MEDIA.DIGITAL</a></li>
+            </ul>
+          </div>
+    
+          <div class="col-6 col-md-2 mb-3">
+            <h4 class="text-white text-align-center fw-bold">Follow Us</h4>
+            <ul class="nav flex-row">
+              <li class="ms-2" style="font-size: 25px;"><i class="fa-brands fa-facebook"></i></li>
+            <li class="ms-3" style="font-size: 25px;"><i class="fa-brands fa-google-plus"></i></li>
+            <li class="ms-3" style="font-size: 25px;"><i class="fa-brands fa-square-instagram"></i></li>
+            <li class="ms-3" style="font-size: 25px;"><i class="fa-brands fa-square-twitter"></i></li>
+                      </ul>
+          </div>
+    
+          <div class="col-md-5 offset-md-1 mb-3">
+            <form>
+              <h4 class="fw-bold">Subscribe to our newsletter</h4>
+              <p>Monthly digest of what's new and exciting from us.</p>
+              <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                <label for="newsletter1" class="visually-hidden">Email address</label>
+                <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                <button class="btn btn-secondary" type="button">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+    
+        <div class="text-center border-top">
+          <p class="my-4">© 2024 Company, Inc. All rights reserved |<span class="text-info fw-bold">@SHARIQUA TASKEEN.G</span>|</p>
+        </div>
+      </footer>
+    
+      
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
